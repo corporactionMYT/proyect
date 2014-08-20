@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820193430) do
+ActiveRecord::Schema.define(version: 20140820201358) do
 
   create_table "areas", force: true do |t|
     t.string   "name"
@@ -22,6 +22,35 @@ ActiveRecord::Schema.define(version: 20140820193430) do
   create_table "documents", force: true do |t|
     t.string   "name"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "instructors", force: true do |t|
+    t.integer  "document_id"
+    t.string   "number_document"
+    t.string   "name"
+    t.string   "last_name"
+    t.string   "gender"
+    t.string   "street_address"
+    t.string   "email"
+    t.string   "phone"
+    t.integer  "area_id"
+    t.integer  "user_id"
+    t.integer  "online_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "instructors", ["area_id"], name: "index_instructors_on_area_id"
+  add_index "instructors", ["document_id"], name: "index_instructors_on_document_id"
+  add_index "instructors", ["online_id"], name: "index_instructors_on_online_id"
+  add_index "instructors", ["user_id"], name: "index_instructors_on_user_id"
+
+  create_table "onlines", force: true do |t|
+    t.string   "number"
+    t.string   "number_machines"
+    t.string   "number_operator"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

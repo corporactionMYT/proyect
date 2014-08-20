@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :instructors
+
+  resources :onlines
+
   resources :areas
 
   resources :users
