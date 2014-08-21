@@ -47,3 +47,5 @@ gem 'quiet_assets'
 gem 'rails_layout'
 end
 
+gem 'paperclip'
+
