@@ -1,19 +1,19 @@
-<h1>Listing instructors</h1>
+<h1>Listado de  instructores</h1>
 
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th>Document</th>
-      <th>Number document</th>
-      <th>Name</th>
-      <th>Last name</th>
-      <th>Gender</th>
-      <th>Street address</th>
+      <th>Documento</th>
+      <th>Numero documento</th>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Genero</th>
+      <th>Direccion</th>
       <th>Email</th>
-      <th>Phone</th>
+      <th>Telefono</th>
       <th>Area</th>
-      <th>User</th>
-      <th>Online</th>
+      <th>Rol</th>
+      <th>Linea</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -32,9 +32,9 @@
         <td><%= instructor.area %></td>
         <td><%= instructor.user %></td>
         <td><%= instructor.online %></td>
-        <td><%= link_to 'Show', instructor %></td>
-        <td><%= link_to 'Edit', edit_instructor_path(instructor) %></td>
-        <td><%= link_to 'Destroy', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', instructor %></td>
+        <td><%= link_to 'Editar', edit_instructor_path(instructor) %></td>
+        <td><%= link_to 'Eliminar', instructor, method: :delete, data: { confirm: 'Seguro desea Eliminar?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Instructor', new_instructor_path %>
+<%= link_to 'Nuevo Instructor', new_instructor_path %>
