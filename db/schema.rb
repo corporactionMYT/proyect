@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820201358) do
+ActiveRecord::Schema.define(version: 20140827191908) do
 
   create_table "areas", force: true do |t|
     t.string   "name"
@@ -54,6 +54,18 @@ ActiveRecord::Schema.define(version: 20140820201358) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "operations", force: true do |t|
+    t.string   "name"
+    t.integer  "area_id"
+    t.text     "description"
+    t.string   "maquina"
+    t.string   "time_standar"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "operations", ["area_id"], name: "index_operations_on_area_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

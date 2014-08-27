@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @operation.name %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @operation.area %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @operation.description %>
+</p>
+
+<p>
+  <strong>Maquina:</strong>
+  <%= @operation.maquina %>
+</p>
+
+<p>
+  <strong>Time standar:</strong>
+  <%= @operation.time_standar %>
+</p>
+
+<%= link_to 'Edit', edit_operation_path(@operation) %> |
+<%= link_to 'Back', operations_path %>
