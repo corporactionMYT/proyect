@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @operation.name %>
 </p>
 
@@ -9,9 +9,9 @@
   <strong>Area:</strong>
   <%= @operation.area %>
 </p>
-
+<%=image_tag@operation.image.url(:thumb)%>
 <p>
-  <strong>Description:</strong>
+  <strong>Descripcion:</strong>
   <%= @operation.description %>
 </p>
 
@@ -21,9 +21,9 @@
 </p>
 
 <p>
-  <strong>Time standar:</strong>
+  <strong>Tiempo estandar:</strong>
   <%= @operation.time_standar %>
 </p>
 
-<%= link_to 'Edit', edit_operation_path(@operation) %> |
-<%= link_to 'Back', operations_path %>
+<%= link_to 'Editar', edit_operation_path(@operation) %> |
+<%= link_to 'Atras', operations_path %>

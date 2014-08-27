@@ -1,13 +1,14 @@
-<h1>Listing operations</h1>
+<h1>Listado de operaciones</h1>
 
-<table>
+<table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Image</th>
+      <th>Nombre</th>
       <th>Area</th>
-      <th>Description</th>
+      <th>Descripcion</th>
       <th>Maquina</th>
-      <th>Time standar</th>
+      <th>Tempo estandar</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,14 +16,15 @@
   <tbody>
     <% @operations.each do |operation| %>
       <tr>
+        <td><%=image_tag operation.image.url(:thumb)%></td>
         <td><%= operation.name %></td>
         <td><%= operation.area %></td>
         <td><%= operation.description %></td>
         <td><%= operation.maquina %></td>
         <td><%= operation.time_standar %></td>
-        <td><%= link_to 'Show', operation %></td>
-        <td><%= link_to 'Edit', edit_operation_path(operation) %></td>
-        <td><%= link_to 'Destroy', operation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', operation %></td>
+        <td><%= link_to 'Editar', edit_operation_path(operation) %></td>
+        <td><%= link_to 'Eliminar', operation, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Operation', new_operation_path %>
+<%= link_to 'Nueva Operacion', new_operation_path %>

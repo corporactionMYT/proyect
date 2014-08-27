@@ -69,6 +69,6 @@ class OperationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def operation_params
-      params.require(:operation).permit(:name, :area_id, :description, :maquina, :time_standar)
+      params.require(:operation).permit(:name, :area_id, :description, :maquina, :time_standar, :image)
     end
 end

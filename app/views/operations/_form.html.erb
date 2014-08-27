@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :nombre %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :area_id %><br>
+    <%= f.label :area %><br>
     <%= f.text_field :area_id %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :descripcion %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
@@ -28,10 +28,14 @@
     <%= f.text_field :maquina %>
   </div>
   <div class="field">
-    <%= f.label :time_standar %><br>
+    <%= f.label :tiempo_estandar %><br>
     <%= f.text_field :time_standar %>
   </div>
+<div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear" %>
   </div>
 <% end %>
