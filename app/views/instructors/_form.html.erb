@@ -1,15 +1,14 @@
-<%= simple_form_for(@instructor, :html => { :class => 'form-horizontal' } ) do |f| %>
-
+<%= form_for(@instructor) do |f|  %>
   <% if @instructor.errors.any? %>
-	<div id="error_explanation">
-  	<h2><%= pluralize(@instructor.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instructor.errors.count, "error") %> prohibited this instructor from being saved:</h2>
 
-  	<ul>
-  	<% @instructor.errors.full_messages.each do |message| %>
-    	<li><%= message %></li>
-  	<% end %>
-  	</ul>
-	</div>
+      <ul>
+      <% @instructor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
 
   <div class="field">
