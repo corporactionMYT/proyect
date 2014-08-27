@@ -49,3 +49,4 @@ end
 
 gem 'paperclip'
 
+gem 'simple_form'
